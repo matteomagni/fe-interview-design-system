@@ -14,8 +14,10 @@ This is my implementation of the Tabs component, using:
 # Install dependencies
 pnpm install
 
-# Run Storybook To See the Tabs component
+# Run Storybook To test the Tabs component
 pnpm storybook
 
-# Or Run a production build of the Tabs component
+# Alternatively, you can test a production build of the component
+pnpm preview
+# A static page with the Tabs Component will be served at http://localhost:4173/
 ```

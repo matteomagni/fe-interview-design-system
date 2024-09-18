@@ -10,7 +10,8 @@
     "prettier": "pnpm exec prettier src/ --write",
     "storybook": "storybook dev -p 6006",
     "test": "vitest run",
-    "tsc": "tsc -b"
+    "tsc": "tsc -b",
+    "preview": "vite build && vite preview"
   },
   "dependencies": {
     "react": "^18.3.1",
