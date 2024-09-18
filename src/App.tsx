@@ -6,12 +6,15 @@ import { panelListContent, tabListContent } from './constants/content';
 
 const GlobalStyle = createGlobalStyle`
   body {
-    padding: 108px 20px 20px;
+    padding: 20px;
+  }
+
+  hr {
+    margin: 40px 0;
   }
 `
 
 const App = () => {
-
     return (
         <ThemeProvider theme={theme}>
             <GlobalStyle />
@@ -20,7 +23,7 @@ const App = () => {
                 {panelListContent}
             </Tabs>
 
-
+            <hr />
 
             <Tabs variant={TabVariant.UNDERLINE} tabsLabel="Menu TabList">
                 {tabListContent}

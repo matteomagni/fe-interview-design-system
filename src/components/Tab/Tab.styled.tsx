@@ -25,7 +25,7 @@ const StyledTab = styled.button<{ $badge: boolean; }>`
 export const StyledUnderlineTab = styled(StyledTab) <{ $selected: boolean; }>`
     border: none;
     padding: 0;
-    background-color: ${props => props.theme.colors.white};
+    background-color: transparent;
     border-radius: 2px;
     position: relative;
     outline-offset: 2px;
