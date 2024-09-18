@@ -17,7 +17,6 @@ const preview: Preview = {
             return <ThemeProvider theme={theme}>{storyFn()}</ThemeProvider>;
         },
     ],
-    tags: ['autodocs'],
 };
 
 export default preview;

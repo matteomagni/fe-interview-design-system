@@ -1,11 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import TabList from '@components/TabList/TabList';
-import Tab from '@components/Tab/Tab';
 import Tabs from '@components/Tabs/Tabs';
-import { ColorVariant, TabVariant } from '@customTypes/types';
-import Panel from '@components/Panel/Panel';
-import PanelList from '@components/PanelList/PanelList';
-import { LinesContent, SquaresContent } from '../../constants/Content';
+import { TabVariant } from '@customTypes/types';
+import { panelListContent, tabListContent } from '../../constants/content';
 import { userEvent, within, expect } from '@storybook/test';
 
 const meta: Meta<typeof Tabs> = {
@@ -15,66 +11,23 @@ const meta: Meta<typeof Tabs> = {
       options: ['Pill', 'Underline'],
       control: { type: 'select' },
     },
+    children: {
+      table: {
+        disable: true
+      }
+    }
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: 'The <b>Tabs</b> component render an accessible Tab List and related Tab Panels. Each Tab in the TabList is a button that can be used to display his associated Panel<br/>' +
+          'To associate a Tab to a Panel just assign a string to the <b>tabKey</b> prop of the Tab and assign the same string to the <b>panelKey prop of the Panel</p>'
+      },
+    },
   },
 };
 
 type Story = StoryObj<typeof Tabs>;
-
-const tabList =
-  <TabList>
-    <Tab
-      label="Emails"
-      tabKey="ePanel"
-      isSelected />
-    <Tab
-      badge
-      badgeLabel={'Warning'}
-      badgeVariant={ColorVariant.NEGATIVE}
-      label="Files"
-      tabKey="wPanel" />
-    <Tab
-      label="Edits"
-      tabKey="editsPanel" />
-    <Tab
-      label="Dashboard"
-      tabKey="dPanel" />
-    <Tab
-      label="Messages"
-      tabKey="mPanel" />
-  </TabList>;
-
-const panelList = <PanelList>
-  <Panel panelKey="ePanel">
-    <LinesContent
-      length={5}
-      title="This is Email Panel"
-    />
-  </Panel>
-  <Panel panelKey="wPanel">
-    <SquaresContent
-      length={6}
-      title="This is Files Panel"
-    />
-  </Panel>
-  <Panel panelKey="editsPanel">
-    <LinesContent
-      length={8}
-      title="This is Edits Panel"
-    />
-  </Panel>
-  <Panel panelKey="dPanel">
-    <SquaresContent
-      length={3}
-      title="This is Dashboards Panel"
-    />
-  </Panel>
-  <Panel panelKey="mPanel">
-    <LinesContent
-      length={7}
-      title="This is Messages Panel"
-    />
-  </Panel>
-</PanelList>
 
 export const PillTabs: Story = {
   name: 'Tabs with Pill variant',
@@ -83,10 +36,11 @@ export const PillTabs: Story = {
     tabsLabel: 'Menu Tabs',
     children:
       <>
-        {tabList}
-        {panelList}
+        {tabListContent}
+        {panelListContent}
       </>
   },
+  tags: ['autodocs'],
 };
 
 export const UnderlineTabs: Story = {
@@ -96,10 +50,11 @@ export const UnderlineTabs: Story = {
     tabsLabel: 'Menu Tabs',
     children:
       <>
-        {tabList}
-        {panelList}
+        {tabListContent}
+        {panelListContent}
       </>
   },
+  tags: ['autodocs'],
 };
 
 export const UserInteractions: Story = {
@@ -108,8 +63,8 @@ export const UserInteractions: Story = {
     tabsLabel: 'Menu Tabs',
     children:
       <>
-        {tabList}
-        {panelList}
+        {tabListContent}
+        {panelListContent}
       </>
   },
   play: async ({ canvasElement }) => {
@@ -119,7 +74,7 @@ export const UserInteractions: Story = {
     await expect(
       window.getComputedStyle(canvas.getByRole('tabpanel', { name: /edits/i }), null).display
     ).toBe('block');
-  },
+  }
 };
 
 export default meta;

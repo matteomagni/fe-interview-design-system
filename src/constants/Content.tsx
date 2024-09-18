@@ -1,5 +1,9 @@
 import BodyText from "@components/BodyText/BodyText";
-import { TextSizeVariant } from "@customTypes/types";
+import Panel from "@components/Panel/Panel";
+import PanelList from "@components/PanelList/PanelList";
+import Tab from "@components/Tab/Tab";
+import TabList from "@components/TabList/TabList";
+import { ColorVariant, TextSizeVariant } from "@customTypes/types";
 import styled from "styled-components";
 
 type ContentType = {
@@ -72,3 +76,59 @@ export const SquaresContent = (props: ContentType) => {
 
     );
 };
+
+export const tabListContent =
+    <TabList>
+        <Tab
+            label="Emails"
+            tabKey="ePanel"
+            isSelected />
+        <Tab
+            badge
+            badgeLabel={'Warning'}
+            badgeVariant={ColorVariant.NEGATIVE}
+            label="Files"
+            tabKey="wPanel" />
+        <Tab
+            label="Edits"
+            tabKey="editsPanel" />
+        <Tab
+            label="Dashboard"
+            tabKey="dPanel" />
+        <Tab
+            label="Messages"
+            tabKey="mPanel" />
+    </TabList>;
+
+export const panelListContent = <PanelList>
+    <Panel panelKey="ePanel">
+        <LinesContent
+            length={5}
+            title="This is Email Panel"
+        />
+    </Panel>
+    <Panel panelKey="wPanel">
+        <SquaresContent
+            length={6}
+            title="This is Files Panel"
+        />
+    </Panel>
+    <Panel panelKey="editsPanel">
+        <LinesContent
+            length={8}
+            title="This is Edits Panel"
+        />
+    </Panel>
+    <Panel panelKey="dPanel">
+        <SquaresContent
+            length={3}
+            title="This is Dashboards Panel"
+        />
+    </Panel>
+    <Panel panelKey="mPanel">
+        <LinesContent
+            length={7}
+            title="This is Messages Panel"
+        />
+    </Panel>
+</PanelList>
