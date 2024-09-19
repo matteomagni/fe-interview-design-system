@@ -10,11 +10,15 @@ const meta: Meta<typeof Tabs> = {
     variant: {
       options: ['Pill', 'Underline'],
       control: { type: 'select' },
+      description: 'Set the Tabs variant',
     },
     children: {
       table: {
         disable: true
       }
+    },
+    tabsLabel: {
+      description: 'Set the value for aria-label attribute',
     }
   },
   parameters: {
