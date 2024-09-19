@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import Tabs from '@components/Tabs/Tabs';
 import { TabVariant } from '@customTypes/types';
-import { panelListContent, tabListContent } from '@components/Content/contentc';
 import { userEvent, within, expect } from '@storybook/test';
+import { panelListContent, tabListContent } from '@components/Content/Content';
 
 const meta: Meta<typeof Tabs> = {
   component: Tabs,

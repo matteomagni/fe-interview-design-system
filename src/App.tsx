@@ -2,7 +2,7 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { theme } from '@styles/theme';
 import { TabVariant } from '@customTypes/types';
 import Tabs from '@components/Tabs/Tabs';
-import { panelListContent, tabListContent } from '@components/Content/contentc';
+import { panelListContent, tabListContent } from '@components/Content/Content';
 
 const GlobalStyle = createGlobalStyle`
   body {
