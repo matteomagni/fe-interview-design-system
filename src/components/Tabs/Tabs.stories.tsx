@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import Tabs from '@components/Tabs/Tabs';
 import { TabVariant } from '@customTypes/types';
-import { panelListContent, tabListContent } from '../../constants/content';
+import { panelListContent, tabListContent } from '@components/Content/contentc';
 import { userEvent, within, expect } from '@storybook/test';
 
 const meta: Meta<typeof Tabs> = {
@@ -30,7 +30,6 @@ const meta: Meta<typeof Tabs> = {
 type Story = StoryObj<typeof Tabs>;
 
 export const PillTabs: Story = {
-  name: 'Tabs with Pill variant',
   args: {
     variant: 'Pill' as TabVariant,
     tabsLabel: 'Menu Tabs',
@@ -44,7 +43,6 @@ export const PillTabs: Story = {
 };
 
 export const UnderlineTabs: Story = {
-  name: 'Tabs with Underline variant',
   args: {
     variant: 'Underline' as TabVariant,
     tabsLabel: 'Menu Tabs',
@@ -55,6 +53,24 @@ export const UnderlineTabs: Story = {
       </>
   },
   tags: ['autodocs'],
+};
+
+export const OverflowTabs: Story = {
+  args: {
+    variant: 'Pill' as TabVariant,
+    tabsLabel: 'Menu Tabs',
+    children:
+      <>
+        {tabListContent}
+        {panelListContent}
+      </>
+  },
+  tags: ['autodocs'],
+  parameters: {
+    viewport: {
+      defaultViewport: 'mobile1'
+    },
+  },
 };
 
 export const UserInteractions: Story = {

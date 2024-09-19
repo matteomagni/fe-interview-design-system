@@ -1,6 +1,6 @@
-import { TextSizeVariant } from '@customTypes/types';
-import styled from 'styled-components';
 import { ReactNode } from 'react';
+import styled from 'styled-components';
+import { TextSizeVariant } from '@customTypes/types';
 
 type BodyTextProps = {
     variant: TextSizeVariant,

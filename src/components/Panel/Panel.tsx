@@ -1,8 +1,8 @@
-import BodyText from "@components/BodyText/BodyText";
-import { TabsContext } from "@components/Tabs/tabs.context";
-import { ReactNode, useContext } from "react";
-import styled from "styled-components";
+import { ReactNode, useContext } from 'react';
+import styled from 'styled-components';
 import { TextSizeVariant } from '@customTypes/types';
+import BodyText from '@components/BodyText/BodyText';
+import { TabsContext } from '@components/Tabs/tabs.context';
 
 type PanelProps = {
     panelKey: string,

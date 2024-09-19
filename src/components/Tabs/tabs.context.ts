@@ -1,5 +1,5 @@
-import { TabVariant } from '@customTypes/types';
 import React, { Dispatch, SetStateAction } from 'react';
+import { TabVariant } from '@customTypes/types';
 
 export type TabsContextType = {
     tabListVariant: TabVariant,

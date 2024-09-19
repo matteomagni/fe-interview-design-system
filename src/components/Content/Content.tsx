@@ -1,10 +1,10 @@
-import BodyText from "@components/BodyText/BodyText";
-import Panel from "@components/Panel/Panel";
-import PanelList from "@components/PanelList/PanelList";
-import Tab from "@components/Tab/Tab";
-import TabList from "@components/TabList/TabList";
-import { ColorVariant, TextSizeVariant } from "@customTypes/types";
-import styled from "styled-components";
+import styled from 'styled-components';
+import { ColorVariant, TextSizeVariant } from '@customTypes/types';
+import BodyText from '@components/BodyText/BodyText';
+import Panel from '@components/Panel/Panel';
+import PanelList from '@components/PanelList/PanelList';
+import Tab from '@components/Tab/Tab';
+import TabList from '@components/TabList/TabList';
 
 type ContentType = {
     length: number,
@@ -24,6 +24,7 @@ const LinesContentWrapper = styled(ContentWrapper)`
 const Line = styled.div`
     width: 335px;
     height: 56px;
+    max-width: 100%;
     background-color: #D9D9D9;
     border-radius: 12px;
 `;
@@ -35,7 +36,8 @@ const SquaresContentWrapper = styled(ContentWrapper)`
 
 const Square = styled.div`
     width: 160px;
-    height: 160px;
+    aspect-ratio: 1;
+    max-width: 47%;
     background-color: #D9D9D9;
     border-radius: 12px;
 `;

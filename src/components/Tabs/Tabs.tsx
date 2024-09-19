@@ -1,6 +1,6 @@
-import { ReactNode, useState } from "react";
-import { TabsContext } from "./tabs.context";
-import { TabVariant } from "@customTypes/types";
+import { ReactNode, useState } from 'react';
+import { TabVariant } from '@customTypes/types';
+import { TabsContext } from './tabs.context';
 
 type TabsProps = {
     variant: TabVariant,

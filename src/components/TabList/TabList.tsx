@@ -1,8 +1,7 @@
-import { TabVariant } from "@customTypes/types";
-import { useContext } from "react";
-import { ReactNode } from "react";
-import styled from "styled-components";
-import { TabsContext } from "@components/Tabs/tabs.context";
+import { useContext, ReactNode } from 'react';
+import { TabVariant } from '@customTypes/types';
+import { TabsContext } from '@components/Tabs/tabs.context';
+import styled from 'styled-components';
 
 type TabListProps = {
     children: ReactNode;

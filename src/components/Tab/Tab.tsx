@@ -1,9 +1,9 @@
+import { useContext, useEffect } from 'react';
+import { ColorVariant, TabVariant, TextSizeVariant } from '@customTypes/types';
 import Badge from '@components/Badge/Badge';
 import BodyText from '@components/BodyText/BodyText';
-import { ColorVariant, TabVariant, TextSizeVariant } from '@customTypes/types';
-import { StyledPillTab, StyledUnderlineTab } from './Tab.styled';
-import { useContext, useEffect } from 'react';
 import { TabsContext } from '@components/Tabs/tabs.context';
+import { StyledPillTab, StyledUnderlineTab } from './Tab.styled';
 
 type TabProps = {
     variant?: TabVariant;

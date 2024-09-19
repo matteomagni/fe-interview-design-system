@@ -1,6 +1,6 @@
+import styled from 'styled-components';
 import { ColorVariant, TextSizeVariant } from '@customTypes/types';
 import BodyText from '@components/BodyText/BodyText';
-import styled from 'styled-components';
 
 type BadgeProps = {
     variant: ColorVariant;
